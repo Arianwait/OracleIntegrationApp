@@ -1,0 +1,40 @@
+.root {
+	-fx-background-image: url('file:data/background/main.png');
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-font-size: 16px; /* Установка размера шрифта для всех элементов */
+    -fx-background-color: #f0f0f0; /* Светлый фон для всего приложения */
+}
+
+.text-style {
+    -fx-fill: gray; /* Серый цвет текста для элементов Text */
+    -fx-font-weight: bold; /* Жирный текст */
+}
+
+.button {
+    -fx-background-color: #ffffff; /* Белый фон кнопок */
+    -fx-text-fill: black; /* Черный текст на кнопках */
+    -fx-border-color: #cccccc; /* Граница кнопок */
+    -fx-border-width: 1; /* Ширина границы */
+}
+
+.menu-bar {
+    -fx-background-color: #dddddd; /* Светло-серый фон для меню */
+}
+
+/* Стиль для убирания анимации при нажатии на кнопку */
+.button:pressed {
+    -fx-background-color: #ffffff; /* Фон кнопки при нажатии */
+}
+
+#custom-image-view {
+    -fx-translate-y: 100; /* Сдвигаем изображение вниз на 50 пикселей */
+}
+
+.label {
+
+    -fx-font-family: Arial; /* Шрифт */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-font-weight: bold; /* Жирность текста */
+}

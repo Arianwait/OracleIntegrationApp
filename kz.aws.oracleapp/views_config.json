@@ -1,0 +1,49 @@
+{
+  "name": "Полеты",
+  "MenuItem": [
+    {
+      "name": "Информация о полетах",
+      "SQLName": "FLIGHTINFORMATION",
+      "type": "view",
+      "fields": [],
+      "description": "Информация о полетах"
+    },
+    {
+      "name": "Отмененные полеты",
+      "SQLName": "DELAYEDFLIGHTS",
+      "type": "view",
+      "fields": [],
+      "description": "Отмененные полеты"
+    },
+	{
+	  "name": "Таблица полетов",
+	  "SQLName": "AIRMANADGER1.Flights",
+	  "type": "view",
+	  "fields": [],
+	  "description": "Отмененные полеты"
+	},
+    {
+      "name": "Добавление полета",
+      "SQLName": "InsertFlightRecord",
+      "type": "hproc",
+      "fields": [
+        { "name": "Rais Status", "type": "TableList", "ListItems" : {"TableName" : "StatusDescriptions", "indexColumn" : "Status", "indextype": "int","valueColumn" : "Description"}, "placeholder": "Enter Rais Status" },
+        { "name": "Rais Status Cause", "type": "VARCHAR2", "placeholder": "Enter Rais Status Cause" },
+        { "name": "Rais Departure", "type": "DATE", "placeholder": "Enter Rais Departure" },
+        { "name": "Rais Arrival", "type": "DATE", "placeholder": "Enter Rais Arrival" },
+        { "name": "Rais Actual Arrival", "type": "DATE", "placeholder": "Enter Rais Actual Arrival" },
+        { "name": "Rais Actual Departure", "type": "DATE", "placeholder": "Enter Rais Actual Departure" },
+        { "name": "Avia ID", "type": "TableList", "ListItems" : {"TableName" : "Airlines", "indexColumn" : "AVIA_ID", "indextype" : "int",  "valueColumn" : "avai_name"}, "placeholder": "Enter Avia ID"},
+        { "name": "Samolet ID", "type": "NUMBER", "placeholder": "Enter Samolet ID" },
+        { "name": "Airport ID Arrival", "type": "TableList", "ListItems" : {"TableName" : "Other_Airports",  "indexColumn" : "airoport_ID", "indextype" : "String",  "valueColumn" : "airoport_Name"}, "placeholder": "Enter Airport ID Arrival" },
+        { "name": "Airport ID Departure", "type": "TableList", "ListItems" : {"TableName" : "Other_Airports", "indexColumn" : "airoport_ID", "indextype" : "String", "valueColumn" : "airoport_Name"}, "placeholder": "Enter Airport ID Departure" }
+      ]
+    },
+    {
+      "name": "Отчет о опозданиях",
+      "SQLName": "FlightInformationOutput",
+      "type": "sproc",
+      "fields": []
+    }
+  ]
+}
